@@ -1,0 +1,12 @@
+{
+  "name": "miji",
+  "private": true,
+  "packageManager": "pnpm@10",
+  "scripts": {
+    "local": "turbo run local --parallel",
+    "server:local": "turbo run local --filter=miji-server-repo"
+  },
+  "devDependencies": {
+    "turbo": "^2.9.18"
+  }
+}
