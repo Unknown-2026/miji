@@ -1,0 +1,20 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "tasks": {
+    "local": {
+      "cache": false,
+      "persistent": true,
+      "env": ["JAVA_HOME", "GRADLE_OPTS", "PATH"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["build/**", "android/app/build/**"]
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage/**"]
+    }
+  },
+  "ui": "tui"
+}
